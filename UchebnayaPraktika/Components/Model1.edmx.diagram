@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="efa2b6c4ce21439aa92d829594db2503" Name="Diagram1">
+        <EntityTypeShape EntityType="UchebnayaPractikaModel.ProductCountry" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchebnayaPractikaModel.ProductOrder" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchebnayaPractikaModel.ProductSupplier" Width="1.5" PointX="5.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchebnayaPractikaModel.Role" Width="1.5" PointX="1.5" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchebnayaPractikaModel.Status" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchebnayaPractikaModel.StatusReceipt" Width="1.5" PointX="0.75" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchebnayaPractikaModel.Supplier" Width="1.5" PointX="0.75" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchebnayaPractikaModel.Unit" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchebnayaPractikaModel.User" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+        <AssociationConnector Association="UchebnayaPractikaModel.FK_User_Role" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="UchebnayaPractikaModel.Country" Width="1.5" PointX="0.75" PointY="0.875" />
+        <EntityTypeShape EntityType="UchebnayaPractikaModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="0.75" />
+        <AssociationConnector Association="UchebnayaPractikaModel.FK_ProductCountry_Country" />
+        <EntityTypeShape EntityType="UchebnayaPractikaModel.Product" Width="1.5" PointX="3" PointY="3.75" />
+        <AssociationConnector Association="UchebnayaPractikaModel.FK_Product_Unit" />
+        <AssociationConnector Association="UchebnayaPractikaModel.FK_ProductCountry_Product" />
+        <AssociationConnector Association="UchebnayaPractikaModel.FK_ProductOrder_Product" />
+        <AssociationConnector Association="UchebnayaPractikaModel.FK_ProductSupplier_Product" />
+        <EntityTypeShape EntityType="UchebnayaPractikaModel.Order" Width="1.5" PointX="3" PointY="9.5" />
+        <AssociationConnector Association="UchebnayaPractikaModel.FK_Order_Status" />
+        <AssociationConnector Association="UchebnayaPractikaModel.FK_Order_User" />
+        <AssociationConnector Association="UchebnayaPractikaModel.FK_Order_User1" />
+        <AssociationConnector Association="UchebnayaPractikaModel.FK_ProductOrder_Order" />
+        <EntityTypeShape EntityType="UchebnayaPractikaModel.ReceiptOfProduct" Width="1.5" PointX="3" PointY="19.125" />
+        <AssociationConnector Association="UchebnayaPractikaModel.FK_ProductSupplier_ReceiptOfProduct" />
+        <AssociationConnector Association="UchebnayaPractikaModel.FK_ReceiptOfProduct_StatusReceipt" />
+        <AssociationConnector Association="UchebnayaPractikaModel.FK_ReceiptOfProduct_Supplier" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

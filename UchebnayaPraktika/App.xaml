@@ -1,0 +1,133 @@
+﻿<Application x:Class="UchebnayaPraktika.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:UchebnayaPraktika"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+    
+        <!--Прямоугольники-->
+        <Style TargetType="Rectangle" x:Key="TopRCT">
+            <Setter Property="Fill" Value="#FFB5D5CA"/>
+        </Style>
+        
+        <Style TargetType="Rectangle" x:Key="BotomRCT">
+            <Setter Property="Fill" Value="#FFE0A9AF"/>
+        </Style>
+
+        <!--Бордер-->
+        <Style TargetType="Border" x:Key="ProductListBR">
+            <Setter Property="Background" Value="#FFFFFCD6"/>
+            <Setter Property="BorderBrush" Value="#FFB5D5CA"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Padding" Value="2"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
+        <!--Текстовые блоки-->
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        
+        <Style TargetType="TextBlock" x:Key="MainWindowTitle">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="AuthPageRegTB">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="AuthPageRegTBRed">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Foreground" Value="Red"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="AddEditProductTB1">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+        
+        <!--Текстовые боксы-->
+        <Style TargetType="TextBox" x:Key="AuthPageRegTBx">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        
+        <Style TargetType="TextBox" x:Key="AddEditProductTB">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+
+        <!--Лейбл-->
+        <Style TargetType="Label" x:Key="TimeLabel">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        
+        <!--Блок пароля-->
+        <Style TargetType="PasswordBox" x:Key="AuthPageRegPB">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+
+        <!--Изображения-->
+        <Style TargetType="Image" x:Key="LogoIMG">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+
+        <!--Кнопки-->
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Background" Value="#FFFFFCD6"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="BackBTN">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Background" Value="#FFFFFCD6"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="ExitBTN">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Background" Value="#FFFFFCD6"/>
+        </Style>
+        
+        <Style TargetType="Button" x:Key="AuthPageRegBTN">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Background" Value="#FFFFFCD6"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+
+        <!--Стек панели-->
+        <Style TargetType="StackPanel" x:Key="AuthPageSP">
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="StackPanel" x:Key="PasswordInfoSP">
+            <Setter Property="Background" Value="#FFFFFCD6"/>
+        </Style>
+
+    </Application.Resources>
+</Application>

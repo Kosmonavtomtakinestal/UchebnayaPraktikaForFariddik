@@ -1,0 +1,34 @@
+﻿<Window x:Class="UchebnayaPraktika.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UchebnayaPraktika"
+        mc:Ignorable="d"
+        Title="Практика" Height="510" Width="800"
+        Icon="Resources/logo/logo.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        
+        <Rectangle Style="{StaticResource TopRCT}"/>
+        
+        <Image Source="/Resources/logo/logo.png" Style="{StaticResource LogoIMG}"></Image>
+
+        <TextBlock Style="{StaticResource MainWindowTitle}" x:Name="TitlePage" Text="Главное окно"/>
+
+        <Frame Grid.Row="1" x:Name="PagesFRM" NavigationUIVisibility="Hidden">
+            
+        </Frame>
+
+        <Rectangle Grid.Row="2" Style="{StaticResource BotomRCT}"/>
+
+        <Button x:Name="BackBTN" Style="{StaticResource BackBTN}" Grid.Row="2" Content="Назад" Click="BackBTN_Click"/>
+
+        <Button x:Name="ExitBTN" Style="{StaticResource ExitBTN}" Grid.Row="2" Content="Выход" Click="ExitBTN_Click"/>
+
+    </Grid>
+</Window>

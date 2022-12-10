@@ -1,0 +1,28 @@
+﻿<Page x:Class="UchebnayaPraktika.Pages.MenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UchebnayaPraktika.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="360" d:DesignWidth="800"
+      Title="MenuPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Button Style="{StaticResource AuthPageRegBTN}" x:Name="ProductsBTN" Click="ProductsBTN_Click">Продукты</Button>
+            <Button Style="{StaticResource AuthPageRegBTN}" x:Name="OrdersBTN" Click="OrdersBTN_Click_1">Заказы</Button>
+            <Button Style="{StaticResource AuthPageRegBTN}" x:Name="GetProdBTN" Click="GetProdBTN_Click">Поступление продуктов</Button>
+        </StackPanel>
+    </Grid>
+</Page>

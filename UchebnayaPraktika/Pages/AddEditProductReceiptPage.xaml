@@ -1,0 +1,84 @@
+﻿<Page x:Class="UchebnayaPraktika.Pages.AddEditProductReceiptPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UchebnayaPraktika.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="360" d:DesignWidth="800"
+      Title="AddEditProductReceiptPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical" >
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock>Номер заказа</TextBlock>
+                    <TextBox x:Name="NameTB" Text="{Binding Id}" Style="{StaticResource AddEditProductTB}"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock>Дата заказа</TextBlock>
+                    <TextBox x:Name="DateAddTB" Text="{Binding Date, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource AddEditProductTB}"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock>Общая стоимость</TextBlock>
+                    <TextBox Text="{Binding TotalCost}" x:Name="TotalCosrProdTB" Style="{StaticResource AddEditProductTB}"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock>Исполнитель</TextBlock>
+                    <ComboBox Width="200" Name="UserCb" Margin="10" SelectedItem="{Binding Supplier}"></ComboBox>
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock>Статус</TextBlock>
+                    <ComboBox Width="200" Name="StatusCb" Margin="10" SelectedItem="{Binding StatusReceipt}"></ComboBox>
+                </StackPanel>
+                <Button x:Name="SeaveBtn" Click="SeaveBtn_Click">Сохранить</Button>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBlock HorizontalAlignment="Center">Продукты в заказе</TextBlock>
+            <ListView ItemsSource="{Binding ProductSupplier}" Margin="10" x:Name="ProductsList">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="70"/>
+                                    <ColumnDefinition Width="100"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding Product.Photo}" Grid.Column="0" Margin="2"></Image>
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock Text="{Binding Product.Name}" TextWrapping="Wrap"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding PriceUnit}"></TextBlock>
+                                        <TextBlock Text=" р"></TextBlock>
+                                    </StackPanel>
+                                    <TextBlock Text="{Binding Count}"/>
+                                    <TextBlock Text="{Binding Product.Unit.Name}"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel></WrapPanel>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+            </ListView>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="AddProductBTN" Margin="5" Click="AddProductBTN_Click" >Добавить продукт</Button>
+                <Button x:Name="DelProductBTN" Margin="5" Click="DelProductBTN_Click" >Удалить продукт</Button>
+            </StackPanel>
+            <Button x:Name="UpdateBTN" Margin="5" >Обновить</Button>
+        </StackPanel>
+    </Grid>
+</Page>
+
